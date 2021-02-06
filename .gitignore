@@ -1,0 +1,6 @@
+*.exe
+*.exe~
+ssl_certs
+.env
+.idea
+*.xlsx
