@@ -30,7 +30,6 @@ func Setup() {
 		configMap[string(rune(k))] = value
 		keyValue := strings.Split(value, "=")
 		if len(keyValue) > 1 {
-			fmt.Println(keyValue[1])
 			err := os.Setenv(keyValue[0], keyValue[1])
 			if err != nil {
 				fmt.Println(err)

@@ -3,6 +3,7 @@ package main
 import (
 	"fmt" //standard libraries, out of the box
 
+	"github.com/karenirenecano/go-mysql-export-to-excel/export"
 	"github.com/karenirenecano/go-mysql-export-to-excel/task"
 	"github.com/karenirenecano/go-mysql-export-to-excel/utility" //your custom local package, go.mod file
 )
@@ -15,6 +16,5 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-
-	fmt.Println(tasks)
+	export.Build(tasks)
 }

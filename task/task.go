@@ -10,3 +10,6 @@ type Task struct {
 	CreatedAt  string `json:"created_at"`  //created timestamp
 	UpdatedAt  string `json:"updated_at"`  //updated timestamp
 }
+
+//Collection of task slice
+type Collection []Task

@@ -14,7 +14,8 @@ func GetAllByUserID(userID int) ([]Task, error) {
 	if err != nil {
 		return nil, err
 	}
-	tasks := make([]Task, 0)
+	// tasks := make([]Task, 0)
+	var tasks Collection
 	for results.Next() { // foreach row
 		var task Task
 		// The position of the columns should be the same that of select query above.
