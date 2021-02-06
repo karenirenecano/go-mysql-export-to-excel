@@ -14,7 +14,7 @@ import (
 //For us to refer to it outside of this package
 //It's like scoped methods on other languages
 func Setup() {
-	envConfig, err := getCWD("/.env")
+	envConfig, err := GetCWD("/.env")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -38,8 +38,8 @@ func Setup() {
 	}
 }
 
-//getCWD : Get Current Working Directory + file path to be checked
-func getCWD(file string) (filePath string, err error) {
+//GetCWD : Get Current Working Directory + file path to be checked
+func GetCWD(file string) (filePath string, err error) {
 	path, errorNotFound := os.Getwd()
 	if errorNotFound != nil {
 		log.Fatal(errorNotFound)
